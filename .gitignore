@@ -2,12 +2,15 @@ under_construction/**
 __pycache__/**
 config/**
 venv/**
-.Rproj.user/**
+src/R/Rproj.user/**
+src/Python/Scrapy/stream/__pycache__/**
 
+*.pper
+*.pyc
 *.code-workspace
 .DS_Store
 
-*.R.Rproj
+R.Rproj
 *.Rhistory
 *.ipynb_checkpoints
 
