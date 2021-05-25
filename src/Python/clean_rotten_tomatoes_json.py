@@ -17,6 +17,7 @@ class CleanRottenTomatoesJSON:
         """ """
         df_no_actors = df_no_actors.fillna(value = np.nan)
         df_no_actors.runtime = df_no_actors.runtime.fillna('')
+        df_no_actors = df_no_actors.drop_duplicates(subset=['id'], keep='last')
         return df_no_actors
 
     def get_df_actors(self):
@@ -28,6 +29,10 @@ class CleanRottenTomatoesJSON:
     def explode_actors(self, df_actors):
         """ """
         df_actors = df_actors.explode('actors')
+        df_actors = df_actors.drop_duplicates(
+            subset=['id', 'actors'], 
+            keep='last'
+        )
         return df_actors
 
 df = CleanRottenTomatoesJSON()

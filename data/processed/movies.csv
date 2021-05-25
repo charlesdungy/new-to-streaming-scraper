@@ -142,7 +142,6 @@ id,movie,tomato_score,release_date,runtime,url
 771504327,I Am Mother,91,Jun 7,1 hr. 54 min.,/m/i_am_mother
 771505324,Elisa & Marcela,43,Jun 7,1 hr. 53 min.,/m/elisa_and_marcela
 771506332,The Wolf's Call (Le chant du loup),85,Jun 20,1 hr. 56 min.,/m/the_wolfs_call
-771506511,Avengement,84,May 24,1 hr. 27 min.,/m/avengement
 771506989,Domino,34,May 31,1 hr. 28 min.,/m/domino_2019
 771507619,Murder Mystery,44,Jun 14,,/m/murder_mystery
 771507796,Summer Night,52,Jul 12,1 hr. 38 min.,/m/summer_night_2019
@@ -289,7 +288,6 @@ id,movie,tomato_score,release_date,runtime,url
 771512638,The Heretics,83,Nov 6,1 hr. 27 min.,/m/the_heretics
 771032631,Nappily Ever After,67,Sep 21,1 hr. 30 min.,/m/nappily_ever_after
 771374273,The Night Comes For Us,91,Oct 19,2 hr. 1 min.,/m/the_night_comes_for_us
-771421829,Solo: A Star Wars Story,69,Sep 14,2 hr. 23 min.,/m/solo_a_star_wars_story
 771432062,Ant-Man and the Wasp,87,Oct 16,1 hr. 58 min.,/m/ant_man_and_the_wasp
 771432066,Incredibles 2,93,Oct 23,1 hr. 58 min.,/m/incredibles_2
 771433813,Hotel Transylvania 3: Summer Vacation,62,Sep 25,1 hr. 37 min.,/m/hotel_transylvania_3_summer_vacation
@@ -463,7 +461,6 @@ id,movie,tomato_score,release_date,runtime,url
 771472955,The Florida Project,96,Feb 20,1 hr. 55 min.,/m/the_florida_project
 771473851,Entanglement,62,Feb 9,1 hr. 25 min.,/m/entanglement_2018
 771473857,The Stray,40,Feb 6,1 hr. 32 min.,/m/the_stray_2017
-771474805,Red Trees,56,Jan 23,1 hr. 27 min.,/m/red_trees
 771475464,Pokémon The Movie: I Choose You!,33,Feb 13,2 hr. 0 min.,/m/pokemon_the_movie_i_choose_you
 771484200,The Lodgers,56,Feb 23,1 hr. 32 min.,/m/the_lodgers
 771484214,The Ritual,73,Feb 9,1 hr. 34 min.,/m/the_ritual_2017
@@ -479,12 +476,10 @@ id,movie,tomato_score,release_date,runtime,url
 771490223,Fred Armisen: Standup For Drummers,67,Feb 6,1 hr. 5 min.,/m/fred_armisen_standup_for_drummers
 771490395,Irreplaceable You,32,Feb 16,1 hr. 36 min.,/m/irreplaceable_you
 771490659,Chris Rock: Tamborine,100,Feb 14,1 hr. 4 min.,/m/chris_rock_tamborine
-771373068,Despicable Me 3,58,Dec 5,1 hr. 30 min.,/m/despicable_me_3
 771434705,Step Sisters,22,Jan 19,1 hr. 48 min.,/m/step_sisters
 771437464,Friend Request,17,Jan 9,1 hr. 32 min.,/m/friend_request
 771438740,Una,76,Jan 2,1 hr. 34 min.,/m/una_2017
 771439270,The Polka King,66,Jan 12,1 hr. 34 min.,/m/the_polka_king
-771439271,American Assassin,34,Dec 5,,/m/american_assassin_2017
 771439881,Bright,27,Dec 22,,/m/bright
 771442423,The Unknown Girl (La fille inconnue),71,Dec 12,1 hr. 47 min.,/m/the_unknown_girl
 771443126,"I, Daniel Blake",92,Jan 16,1 hr. 40 min.,/m/i_daniel_blake
@@ -544,7 +539,6 @@ id,movie,tomato_score,release_date,runtime,url
 771486651,Saving Capitalism,100,Nov 21,1 hr. 13 min.,/m/saving_capitalism
 771486835,A Christmas Prince,73,Nov 17,1 hr. 32 min.,/m/a_christmas_prince
 771324803,Pirates of the Caribbean: Dead Men Tell No Tales,29,Oct 3,2 hr. 15 min.,/m/pirates_of_the_caribbean_dead_men_tell_no_tales
-771422369,First They Killed My Father,87,Sep 15,,/m/first_they_killed_my_father
 771423268,Queen of the Desert,18,Sep 26,2 hr. 7 min.,/m/queen_of_the_desert
 771426860,The Devil's Candy,92,Sep 19,1 hr. 20 min.,/m/the_devils_candy
 771429247,The Babysitter,72,Oct 13,,/m/the_babysitter_2017
@@ -670,7 +664,6 @@ id,movie,tomato_score,release_date,runtime,url
 771473101,Hasan Minhaj: Homecoming King,78,May 23,1 hr. 12 min.,/m/hasan_minhaj_homecoming_king
 771473185,Sarah Silverman: A Speck of Dust,100,May 30,1 hr. 11 min.,/m/sarah_silverman_a_speck_of_dust
 771473668,"Oh, Hello On Broadway",88,Jun 13,1 hr. 42 min.,/m/oh_hello_on_broadway
-771489304,Maria Bamford: Old Baby,100,May 2,1 hr. 4 min.,/m/maria_bamford_old_baby
 19238,Daughters of the Dust,93,Apr 11,1 hr. 52 min.,/m/daughters_of_the_dust
 771355797,Walking With The Enemy,45,Apr 11,2 hr. 6 min.,/m/walking_with_the_enemy
 771414950,The Founder,81,Apr 18,1 hr. 55 min.,/m/the_founder
@@ -813,10 +806,8 @@ id,movie,tomato_score,release_date,runtime,url
 771435748,"Lo and Behold, Reveries of the Connected World",93,Nov 22,1 hr. 38 min.,/m/lo_and_behold_reveries_of_the_connected_world
 771436132,Who's Driving Doug,20,Oct 25,1 hr. 39 min.,/m/whos_driving_doug
 771438363,Hands of Stone,45,Nov 22,1 hr. 45 min.,/m/hands_of_stone
-771439590,Papa: Hemingway in Cuba,11,Oct 25,1 hr. 49 min.,/m/papa_hemingway_in_cuba
 771439786,Kickboxer: Vengeance,41,Nov 8,1 hr. 30 min.,/m/kickboxer_vengeance
 771440474,Tikkun,95,Nov 8,2 hr. 0 min.,/m/tikkun_2016
-771440874,Mr. Church,24,Oct 25,1 hr. 44 min.,/m/mr_church
 771441795,The True Memoirs of an International Assassin,0,Nov 11,1 hr. 38 min.,/m/the_true_memoirs_of_an_international_assassin_2016
 771442759,Hell or High Water,96,Nov 22,1 hr. 42 min.,/m/hell_or_high_water
 771443646,Divines,84,Nov 18,1 hr. 45 min.,/m/divines
@@ -1009,7 +1000,6 @@ id,movie,tomato_score,release_date,runtime,url
 771419616,Love,40,Mar 15,2 hr. 10 min.,/m/love_2015
 771419743,The Masked Saint,14,Apr 5,1 hr. 51 min.,/m/the_masked_saint
 771419752,Victoria,82,Mar 8,2 hr. 20 min.,/m/victoria_2015
-771420494,Mountain Men,80,Mar 8,1 hr. 30 min.,/m/mountain_men_2016
 771421442,Veteran,90,Apr 5,2 hr. 4 min.,/m/veteran_2015
 771422037,Mojave,31,Apr 5,1 hr. 33 min.,/m/mojave_2016
 771422987,Mediterranea,90,Mar 29,1 hr. 47 min.,/m/mediterranea_2015
@@ -1052,7 +1042,6 @@ id,movie,tomato_score,release_date,runtime,url
 771432455,The Pack,55,Feb 5,1 hr. 39 min.,/m/the_pack_2016
 771432792,Extraction,6,Feb 23,1 hr. 36 min.,/m/extraction_2015
 771434424,Capture the Flag,48,Mar 1,1 hr. 37 min.,/m/capture_the_flag_2016
-771435242,Batman: Bad Blood,100,Feb 2,1 hr. 46 min.,/m/batman_bad_blood
 771435668,Marguerite & Julien (Marguerite et Julien),20,Feb 26,1 hr. 44 min.,/m/marguerite_and_julien
 771471554,Hannibal Buress: Comedy Camisado,100,Feb 5,1 hr. 23 min.,/m/hannibal_buress_comedy_camisado
 771350024,The Green Inferno,38,Jan 5,1 hr. 41 min.,/m/the_green_inferno
@@ -1083,8 +1072,6 @@ id,movie,tomato_score,release_date,runtime,url
 771423300,Extraordinary Tales,58,Feb 2,1 hr. 10 min.,/m/extraordinary_tales
 771427754,Palio,95,Dec 15,1 hr. 31 min.,/m/palio
 771429330,Wrecker,0,Jan 5,1 hr. 23 min.,/m/wrecker
-771430086,"Sex, Death And Bowling",17,Dec 15,1 hr. 32 min.,/m/sex_death_and_bowling
-771431418,Finders Keepers,98,Dec 15,1 hr. 22 min.,/m/finders_keepers_2015
 771431947,Rabid Dogs (Enragés),75,Jan 22,1 hr. 34 min.,/m/rabid_dogs_2016
 771435242,Batman: Bad Blood,100,Feb 2,1 hr. 46 min.,/m/batman_bad_blood
 771357231,Self/Less,19,Nov 10,1 hr. 57 min.,/m/selfless_2015
@@ -1196,7 +1183,6 @@ id,movie,tomato_score,release_date,runtime,url
 771376138,Born To Fly,92,Jun 30,1 hr. 23 min.,/m/born_to_fly
 771377009,24 Days,79,Jul 13,1 hr. 50 min.,/m/24_days
 771379093,Clouds of Sils Maria,90,Jul 14,2 hr. 4 min.,/m/clouds_of_sils_maria
-771379877,Monsters: Dark Continent,17,Jun 2,1 hr. 56 min.,/m/monsters_dark_continent
 771380168,The Water Diviner,62,Jul 28,1 hr. 51 min.,/m/the_water_diviner
 771380296,It Follows,95,Jul 14,1 hr. 34 min.,/m/it_follows
 771380388,White God,88,Jul 28,1 hr. 57 min.,/m/white_god
@@ -1266,10 +1252,8 @@ id,movie,tomato_score,release_date,runtime,url
 771378286,Life Partners,67,Mar 3,1 hr. 33 min.,/m/life_partners
 771378301,Preservation,58,Apr 6,1 hr. 30 min.,/m/preservation_2014
 771379171,The Captive,29,Mar 3,1 hr. 52 min.,/m/the_captive_2014
-771379178,The Homesman,80,Feb 17,2 hr. 2 min.,/m/the_homesman
 771379469,Come Back To Me,17,Mar 9,1 hr. 36 min.,/m/come_back_to_me
 771380456,Song Of The Sea,99,Mar 17,1 hr. 33 min.,/m/song_of_the_sea_2014
-771381046,V/H/S: Viral,34,Feb 17,1 hr. 37 min.,/m/vhs_viral
 771381459,TinkerBell and the Legend of the NeverBeast,75,Mar 3,1 hr. 16 min.,/m/tinkerbell_and_the_legend_of_the_neverbeast
 771385911,The Humbling,53,Mar 3,1 hr. 42 min.,/m/the_humbling
 771385999,Son of a Gun,62,Mar 17,1 hr. 48 min.,/m/son_of_a_gun_2015
@@ -1944,7 +1928,6 @@ id,movie,tomato_score,release_date,runtime,url
 770810965,Invictus,76,May 18,2 hr. 14 min.,/m/invictus
 770813273,Chloe,51,Jul 13,1 hr. 39 min.,/m/10011774-chloe
 770814698,Raajneeti,22,Aug 12,2 hr. 50 min.,/m/rajneeti
-770816444,Leap Year,23,May 4,1 hr. 41 min.,/m/leap_year_2010
 770856398,The Runaways,69,Jul 20,1 hr. 47 min.,/m/the_runaways
 770856804,The Bounty Hunter,12,Jul 13,1 hr. 50 min.,/m/1220551-bounty_hunter
 770863879,Karthik Calling Karthik (K.C.K.),80,May 18,2 hr. 5 min.,/m/karthik_calling_karthik
@@ -1981,7 +1964,6 @@ id,movie,tomato_score,release_date,runtime,url
 770808741,Tenderness,40,Apr 13,1 hr. 41 min.,/m/1189010-tenderness
 770809201,Hachi: A Dog's Tale,64,Mar 9,1 hr. 33 min.,/m/hachi_a_dogs_tale
 770811421,Capitalism: A Love Story,74,Mar 9,2 hr. 0 min.,/m/capitalism_a_love_story
-770814825,Michael Jackson's This Is It,81,Jan 26,2 hr. 1 min.,/m/michael_jackson_this_is_it
 770816444,Leap Year,23,May 4,1 hr. 41 min.,/m/leap_year_2010
 770671947,Inglourious Basterds,89,Dec 15,2 hr. 33 min.,/m/inglourious_basterds
 770676132,Angels & Demons,37,Nov 24,2 hr. 19 min.,/m/1189217-angels_and_demons
@@ -2007,7 +1989,6 @@ id,movie,tomato_score,release_date,runtime,url
 770802777,Julie & Julia,77,Dec 8,2 hr. 3 min.,/m/julie_and_julia
 770803031,No Impact Man: The Documentary,83,Jan 19,1 hr. 32 min.,/m/1213732-no_impact_man
 770803219,Cloudy With a Chance of Meatballs,86,Jan 5,1 hr. 21 min.,/m/1196077-cloudy_with_a_chance_of_meatballs
-770803781,Billu,60,Nov 17,2 hr. 17 min.,/m/billu-barber
 770805203,District 9,90,Dec 22,1 hr. 52 min.,/m/district_9
 770805296,Chevolution,76,Jan 19,1 hr. 26 min.,/m/1220683-chevolution
 770807413,Outrage,77,Jan 19,1 hr. 30 min.,/m/10011262-outrage
@@ -2126,7 +2107,6 @@ id,movie,tomato_score,release_date,runtime,url
 770672980,Righteous Kill,18,Jan 6,1 hr. 43 min.,/m/righteous_kill
 770673038,Hellboy II: The Golden Army (Hellboy 2),86,Nov 11,2 hr. 0 min.,/m/hellboy_2_the_golden_army
 770674775,The Sisterhood of the Traveling Pants 2,65,Nov 18,1 hr. 57 min.,/m/sisterhood_of_the_traveling_pants_2
-770674856,Journey to the Center of the Earth,61,Oct 28,1 hr. 33 min.,/m/journey_to_the_center_of_the_earth_2008
 770675607,Wanted,71,Dec 2,1 hr. 50 min.,/m/1174279-wanted
 770676625,The Wackness,70,Jan 6,1 hr. 39 min.,/m/wackness
 770677583,Encounters at the End of the World,94,Nov 18,1 hr. 39 min.,/m/1194818-encounters_at_the_end_of_the_world
@@ -2271,7 +2251,6 @@ id,movie,tomato_score,release_date,runtime,url
 770672423,Death Sentence,20,Jan 8,1 hr. 51 min.,/m/death_sentence
 771002553,10 Questions for the Dalai Lama,79,Oct 23,1 hr. 25 min.,/m/10_questions_for_the_dalai_lama
 771317022,Blade Runner (The Final Cut),92,Dec 17,1 hr. 57 min.,/m/blade_runner_1982
-12722,Harry and the Hendersons,43,Apr 24,1 hr. 51 min.,/m/harry_and_the_hendersons
 12979,The Butterfly Effect,33,Jul 20,1 hr. 53 min.,/m/butterfly_effect
 98825655,The Panic in Needle Park,85,Jun 19,1 hr. 50 min.,/m/1156599-panic_in_needle_park
 330424823,The Host,93,Jul 24,1 hr. 59 min.,/m/the_host_2007
@@ -2603,8 +2582,6 @@ id,movie,tomato_score,release_date,runtime,url
 11195,Scary Movie 3,35,May 11,1 hr. 28 min.,/m/scary_movie_3
 11618,Field of Dreams,87,Jun 1,1 hr. 46 min.,/m/field_of_dreams
 11693,Love Don't Cost a Thing,13,Apr 27,1 hr. 42 min.,/m/love_dont_cost_a_thing
-12229,Police Academy 2: Their First Assignment,31,Apr 6,1 hr. 27 min.,/m/police_academy_2_their_first_assignment
-12306,Police Academy 5: Assignment Miami Beach,0,Apr 6,1 hr. 30 min.,/m/police_academy_5_assignment_miami_beach
 12852,Love Actually,64,Apr 27,2 hr. 15 min.,/m/love_actually
 12927,Cidade de Deus (City of God),91,Jun 8,2 hr. 10 min.,/m/city_of_god
 12931,Cold Mountain,70,Jun 29,2 hr. 34 min.,/m/cold_mountain
@@ -2767,7 +2744,6 @@ id,movie,tomato_score,release_date,runtime,url
 11167,Austin Powers in Goldmember,53,Dec 3,1 hr. 34 min.,/m/austin_powers_in_goldmember
 11170,Licence To Kill,77,Oct 22,2 hr. 13 min.,/m/licence_to_kill
 11242,Scooby-Doo,31,Oct 8,1 hr. 26 min.,/m/1112357-scoobydoo
-11367,Big Fat Liar,44,Sep 24,1 hr. 28 min.,/m/big_fat_liar
 11560,Minority Report,90,Dec 17,2 hr. 20 min.,/m/minority_report
 11611,Blue Crush,62,Jan 14,1 hr. 45 min.,/m/blue_crush
 11719,"Honey, We Shrunk Ourselves!",25,Oct 8,1 hr. 15 min.,/m/honey_we_shrunk_ourselves
@@ -2861,7 +2837,6 @@ id,movie,tomato_score,release_date,runtime,url
 11312,Toys,30,Oct 16,2 hr. 2 min.,/m/toys
 11546,Billy Madison,42,Jan 2,1 hr. 28 min.,/m/billy_madison
 11574,Cats & Dogs,54,Oct 16,1 hr. 27 min.,/m/cats_and_dogs
-11753,The Mummy Returns,47,Oct 2,2 hr. 9 min.,/m/mummy_returns
 12878,American Beauty,87,Jan 2,2 hr. 2 min.,/m/american_beauty
 12911,The Godfather,97,Oct 9,2 hr. 55 min.,/m/godfather
 13021,Scary Movie 2,14,Dec 18,1 hr. 22 min.,/m/scary_movie_2
@@ -3200,7 +3175,6 @@ id,movie,tomato_score,release_date,runtime,url
 559578822,I Went Down,84,Nov 10,1 hr. 45 min.,/m/i_went_down
 770749391,Twentyfourseven,35,Nov 7,1 hr. 45 min.,/m/twentyfourseven
 9717,Godzilla Vs. Monster Zero,57,May 5,1 hr. 34 min.,/m/godzilla_vs_monster_zero
-10408,Tremors,86,Apr 28,1 hr. 36 min.,/m/tremors
 10410,The Saint,30,Oct 6,1 hr. 56 min.,/m/saint
 10659,Lean on Me,69,Oct 20,1 hr. 49 min.,/m/lean_on_me
 10666,The Man in the Iron Mask,32,Aug 11,2 hr. 15 min.,/m/1082400-man_in_the_iron_mask

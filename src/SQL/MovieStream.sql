@@ -18,6 +18,3 @@ CREATE TABLE ACTOR (
     FOREIGN KEY (Rotten_Tomatoes_ID)
         REFERENCES MOVIE (Rotten_Tomatoes_ID)
 );
-
-
-    
