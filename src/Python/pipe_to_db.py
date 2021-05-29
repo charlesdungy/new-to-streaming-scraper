@@ -1,6 +1,6 @@
 from config.config import config
-from mysql.connector import connect, Error
 from datetime import datetime
+from mysql.connector import connect, Error
 
 import csv
 import logging
@@ -28,7 +28,6 @@ class PipeToDB:
 
         file_path = '../../data/processed/movies.csv'
         self.place_into_db(file_path, sql_stmt)
-
 
     def insert_actors(self):
         """ """
