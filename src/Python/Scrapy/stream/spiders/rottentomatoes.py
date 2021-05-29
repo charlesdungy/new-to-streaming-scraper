@@ -1,34 +1,42 @@
-import scrapy
+import csv
 import json
+import scrapy
 
 class RottenTomatoesSpider(scrapy.Spider):
+    """ """
     name = 'rottentomatoes'
-    allowed_domains = ['rottentomatoes.com/']
-    start_urls = ['https://www.rottentomatoes.com/api/private/v2.0/browse?     maxTomato=100&services=netflix_iw&certified&sortBy=release& type=dvd-streaming-all&page=1']
-    page = 1
+    allowed_domains = ['rottentomatoes.com']
+    start_urls = []
+    
+    """ """
+    with open('../../../../data/processed/rotten_tomatoes_search_url.csv') as   url_file:
+        url_reader = csv.reader(url_file, delimiter=',')
+        next(url_reader, None)
+        for row in url_reader:
+            start_urls.append(row[1])
 
     def parse(self, response):
         """ """
         resp = json.loads(response.body)
-        movies = resp.get('results')
+        movies = resp.get('movies')
         
         for movie in movies:
-            yield {
-                'movie': movie.get('title'),
-                'tomato_score': movie.get('tomatoScore'),
-                'release_date': movie.get('dvdReleaseDate'),
-                'synopsis': movie.get('synopsis'),
-                'actors': movie.get('actors'),
-                'runtime': movie.get('runtime'),
-                'url': movie.get('url'),
-                'id': movie.get('id')
-            }
-        
-        check_count = resp.get('counts').get('count')
-        if (check_count > 0):
-            self.page += 1
-            yield scrapy.Request (
-                url = f'https://www.rottentomatoes.com/api/private/v2.0/browse?maxTomato=100&services=netflix_iw&certified&sortBy=release&type=dvd-streaming-all&page={self.page}',
-                callback = self.parse,
-                dont_filter = True 
-            )
+            movie_url = 'https://www.rottentomatoes.com' + movie.get('url')
+            yield scrapy.Request(movie_url, callback=self.parse_movie)
+
+    def parse_movie(self, response):
+        """ """
+        movie = response.xpath(("//div[@id='topSection']//score-board/h1/"
+                                "text()")).extract()[0]
+        score = response.xpath(("//div[@id='topSection']//score-board"
+                                "/@tomatometerscore")).extract()[0]
+        details = response.xpath(("//div[@id='topSection']"
+                                  "//score-board/p/text()")).extract()[0]
+        url = response.request.url
+
+        yield {
+            'Title': movie,
+            'Score': score,
+            'Details': details,
+            'URL': url,
+        }

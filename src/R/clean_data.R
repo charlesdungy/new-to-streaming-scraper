@@ -1,6 +1,9 @@
 library(lubridate)
 library(tidyverse)
 
+current_month <- as.character(month(today() - 30, label = TRUE, abbr = FALSE))
+current_year <- as.character(year(now()))
+
 # Import data ------------------------------------------------------------------
 df <- read_csv("../../data/raw/whatsonnetflix.csv", col_names = FALSE)
 netflix_df <- df
@@ -12,16 +15,16 @@ netflix_df <- netflix_df %>%
   mutate(Temp_Date = case_when(
     str_detect(Title, "Coming to Netflix") ~ Title))
 
-current_month <- as.character(month(today(), 
-                                    label = TRUE, 
-                                    abbr = FALSE))
-
 # 
 netflix_df <- netflix_df %>% 
   fill(Temp_Date) %>%
   mutate(Weekly = case_when(
     str_detect(Temp_Date, "Weekly") ~ "Yes", TRUE ~ "No")) %>%
-  mutate(Date_Arriving = str_match(Temp_Date, paste(current_month, "\\d+")))
+  mutate(Date_Arriving = str_match(Temp_Date, paste(current_month, "\\d+"))) %>%
+  mutate(Date_Arriving = case_when(
+    !str_detect(Date_Arriving, current_year) ~ 
+      str_c(Date_Arriving, sep = " ", current_year), TRUE ~ Date_Arriving)) %>%
+  mutate(Date_Arriving = mdy(Date_Arriving))
 
 # 
 netflix_df <- netflix_df %>% 
@@ -42,7 +45,8 @@ netflix_df <- netflix_df %>%
     TRUE ~ "")) %>%
   mutate(Year = case_when(
     !str_detect(Season_Year, "Season|Series|Collection|Part") ~ Season_Year,
-    TRUE ~ ""))
+    TRUE ~ "0"))
+
 # 
 netflix_df <- netflix_df %>% 
   slice(2:n()) %>%
@@ -50,7 +54,7 @@ netflix_df <- netflix_df %>%
   mutate(Year = str_replace_all(Year, "[^0-9]", ""))
 
 # 
-netflix_df <-  netflix_df %>% 
+netflix_df <- netflix_df %>% 
   relocate(Date_Arriving, .after = Title) %>%
   relocate(Year, .after = Type) %>%
   relocate(Weekly, .after = Season) %>%
@@ -58,12 +62,11 @@ netflix_df <-  netflix_df %>%
 
 #
 file_ext <- ".csv"
-file_name <- str_c("netflix", sep = "_", str_to_lower("April"))
+file_name <- str_c("netflix", sep = "_", str_to_lower(current_month))
 file_name <- str_c(file_name, sep = "", file_ext)
-file_path <- str_c("../../data/interim/", sep = "", file_name)
+file_path <- str_c("../../data/processed/", sep = "", file_name)
 
 # 
 write_csv(
   netflix_df, 
   file = file_path)
-

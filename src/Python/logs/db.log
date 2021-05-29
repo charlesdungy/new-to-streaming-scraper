@@ -1,0 +1,1 @@
+ERROR:root:1062 (23000): Duplicate entry 'Innocence-2004' for key 'movie_score_data.PRIMARY'
