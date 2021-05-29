@@ -1,3 +1,5 @@
+/* Updates made to the MovieStream db from the beginning, however trivial. */
+
 USE MovieStream;
 
 DELETE FROM NETFLIX
@@ -70,3 +72,61 @@ WHERE Title='Escape from Planet Earth';
 UPDATE NETFLIX
 SET Release_year=2019
 WHERE Title='Into the Beat';
+
+UPDATE NETFLIX
+SET Release_year=2021
+WHERE Title='Slay';
+
+UPDATE NETFLIX
+SET Title='Tyler Perry''s Madea''s Big Happy Family'
+WHERE Title LIKE '%Big Happy Family';
+
+UPDATE MOVIE_SCORE_DATA
+SET Title='Tyler Perry''s Madea''s Big Happy Family'
+WHERE Title LIKE '%Big Happy Family';
+
+UPDATE MOVIE_SCORE_DATA
+SET Title='The Fisherman''s Diary'
+WHERE Title LIKE '%Fisherman%';
+
+UPDATE NETFLIX
+SET Title='The Fisherman''s Diary'
+WHERE Title LIKE '%Fisherman%';
+
+UPDATE MOVIE_SCORE_DATA
+SET Title='Dad Stop Embarrassing Me – The Afterparty'
+WHERE Title='Dad Stop Embarrassing Me - The Afterparty';
+
+UPDATE NETFLIX
+SET Title='Perfume Imaginary Museum Time Wrap'
+WHERE Title LIKE 'Perfume Imaginary Museum “Time Wrap”';
+
+UPDATE NETFLIX
+SET Release_year=2020
+WHERE Title='Perfume Imaginary Museum Time Wrap';
+
+UPDATE NETFLIX
+SET Release_year=2019
+WHERE Title='Rudra: The Rise of King Pharaoh';
+
+UPDATE NETFLIX
+SET Title='Shadow and Bone - The Afterparty'
+WHERE Title='Shadow and Bone – The Netflix Afterparty';
+
+UPDATE NETFLIX
+SET Release_year=2019
+WHERE Title='Shiva: Journey to Plunotaria';
+
+UPDATE MOVIE_SCORE_DATA
+SET Title='Story of Kale: When Someone''s in Love'
+WHERE Title LIKE '%Story of Kale%';
+
+UPDATE NETFLIX
+SET Title='Story of Kale: When Someone''s in Love'
+WHERE Title LIKE '%Story of Kale%';
+
+UPDATE MOVIE_SCORE_DATA
+SET Title_category = ltrim(Title_category);
+
+UPDATE MOVIE_SCORE_DATA
+SET Runtime = ltrim(Runtime);

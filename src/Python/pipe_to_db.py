@@ -52,8 +52,8 @@ class PipeToDB:
     def insert_movie_score_data(self):
         """ """
         sql_stmt = ('INSERT INTO MOVIE_SCORE_DATA (Title, '
-            'Title_year, Movie_score, Title_category, Runtime, URL) '
-            'VALUES (%s, %s, %s, %s, %s, %s)')
+                    'Title_year, Movie_score, Title_category, Runtime, URL) '
+                    'VALUES (%s, %s, %s, %s, %s, %s)')
 
         file_name = '../../data/processed/movie_score_data.csv'
         self.place_into_db(file_name, sql_stmt)
@@ -70,11 +70,11 @@ class PipeToDB:
                 except Error as e:
                     logging.error(e)
             self.cnx.commit()
+            cursor.close()
 
     def close_connection(self):
         """ """
         self.cnx.close()
-        self.cursor.close()
 
 x = PipeToDB()
 x.insert_movies()
