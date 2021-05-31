@@ -8,7 +8,7 @@ Current stage: Preparing how to present data with R Markdown.
 
 ## Description
 
-Data are retrieved from two different data sources: [Rotten Tomatoes](https://www.rottentomatoes.com) (RT) and [What's on Netflix](https://www.whats-on-netflix.com) (WON). RT data are cleaned and transformed with Python, while WON data are cleaned and transformed with R.
+Data are retrieved from two different data sources: [What's on Netflix](https://www.whats-on-netflix.com) (WON) and [Rotten Tomatoes](https://www.rottentomatoes.com) (RT). RT data are cleaned and transformed with Python, while WON data are cleaned and transformed with R.
 
 All data are piped into a MySQL database, then retrieved for presentation in R.
 
