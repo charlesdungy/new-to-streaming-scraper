@@ -35,6 +35,10 @@ Here is a high-level look at the pipeline:<br>
 
 * [MySQL](https://www.mysql.com)
 
+## Current Directory Tree
+
+![tree](https://github.com/charlesdungy/new-to-streaming-scraper/blob/main/data/images/tree.png?raw=true)
+
 ## License
 
 MIT
