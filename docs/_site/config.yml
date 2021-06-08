@@ -1,6 +1,0 @@
-name: "my-website"
-navbar:
-  title: "My Website"
-  left:
-    - text: "New to Streaming Data Scraper - This Month"
-      href: index.html
