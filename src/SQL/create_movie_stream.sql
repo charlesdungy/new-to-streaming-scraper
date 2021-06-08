@@ -20,7 +20,7 @@ CREATE TABLE ACTOR (
 );
 
 CREATE TABLE NETFLIX (
-	Title VARCHAR(255) NOT NULL,
+    Title VARCHAR(255) NOT NULL,
     Date_arriving DATE NOT NULL,
     Title_type VARCHAR(10),
     Release_year INT,
@@ -30,9 +30,9 @@ CREATE TABLE NETFLIX (
 );
 
 CREATE TABLE MOVIE_SCORE_DATA (
-	Title VARCHAR(255) NOT NULL,
+    Title VARCHAR(255) NOT NULL,
     Title_year CHAR(4) NOT NULL,
-	Critic_score VARCHAR(3) NOT NULL,
+    Critic_score VARCHAR(3) NOT NULL,
     Audience_score VARCHAR(3) NOT NULL,
     Title_category VARCHAR(255),
     Rating VARCHAR(10),
