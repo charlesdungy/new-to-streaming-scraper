@@ -130,4 +130,3 @@ SET Title_category = ltrim(Title_category);
 
 UPDATE MOVIE_SCORE_DATA
 SET Runtime = ltrim(Runtime);
-
