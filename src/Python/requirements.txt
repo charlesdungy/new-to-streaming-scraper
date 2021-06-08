@@ -1,0 +1,46 @@
+attrs==21.2.0
+Automat==20.2.0
+certifi==2020.12.5
+cffi==1.14.5
+chardet==4.0.0
+constantly==15.1.0
+cryptography==3.4.7
+cssselect==1.1.0
+h2==3.2.0
+hpack==3.0.0
+hyperframe==5.2.0
+hyperlink==21.0.0
+idna==2.10
+incremental==21.3.0
+itemadapter==0.2.0
+itemloaders==1.0.4
+jmespath==0.10.0
+logging==0.4.9.6
+lxml==4.6.3
+mkl-fft==1.3.0
+mkl-random @ file:///opt/concourse/worker/volumes/live/ee9c6651-7474-4ea3-40dc-9000610cf5d2/volume/mkl_random_1618853976708/work
+mkl-service==2.3.0
+mysql-connector-python==8.0.25
+mysql-connector-python-rf==2.2.2
+numpy @ file:///opt/concourse/worker/volumes/live/43c6229c-0418-40f9-7644-06e35c2c24e6/volume/numpy_and_numpy_base_1620831187393/work
+pandas==1.2.4
+parsel==1.6.0
+priority==1.3.0
+Protego==0.1.16
+protobuf==3.17.1
+pyasn1==0.4.8
+pyasn1-modules==0.2.8
+pycparser==2.20
+PyDispatcher==2.0.5
+pyOpenSSL==20.0.1
+python-dateutil @ file:///home/ktietz/src/ci/python-dateutil_1611928101742/work
+pytz @ file:///tmp/build/80754af9/pytz_1612215392582/work
+queuelib==1.6.1
+requests==2.25.1
+Scrapy==2.5.0
+service-identity==21.1.0
+six @ file:///opt/concourse/worker/volumes/live/34b5b2b5-c9cb-44fb-4b8e-8a9a881bfa35/volume/six_1605205329242/work
+Twisted==21.2.0
+urllib3==1.26.5
+w3lib==1.22.0
+zope.interface==5.4.0

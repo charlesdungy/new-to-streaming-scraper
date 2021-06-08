@@ -52,10 +52,18 @@ class PipeToDB:
     def insert_movie_score_data(self):
         """ """
         sql_stmt = ('INSERT INTO MOVIE_SCORE_DATA (Title, '
-                    'Title_year, Movie_score, Title_category, Runtime, URL) '
-                    'VALUES (%s, %s, %s, %s, %s, %s)')
+                    'Title_year, Critic_score, Audience_score, ' 'Title_category, Rating, Runtime, URL, Poster_URL) '
+                    'VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)')
 
         file_name = '../../data/processed/movie_score_data.csv'
+        self.place_into_db(file_name, sql_stmt)
+
+    def insert_movie_poster_data(self):
+        """ """
+        sql_stmt = ('INSERT INTO MOVIE_POSTER_DATA (Poster_URL, '
+                    'Poster_file_path) VALUES (%s, %s)')
+
+        file_name = '../../data/processed/movie_poster_data.csv'
         self.place_into_db(file_name, sql_stmt)
 
     def place_into_db(self, file_name, sql_stmt):
@@ -76,9 +84,14 @@ class PipeToDB:
         """ """
         self.cnx.close()
 
-x = PipeToDB()
-x.insert_movies()
-x.insert_actors()
-x.insert_new_to_netflix()
-x.insert_movie_score_data()
-x.close_connection()
+def main():
+    x = PipeToDB()
+    x.insert_movies()
+    x.insert_actors()
+    x.insert_new_to_netflix()
+    x.insert_movie_score_data()
+    x.insert_movie_poster_data()
+    x.close_connection()
+
+if __name__ == '__main__':
+    main()

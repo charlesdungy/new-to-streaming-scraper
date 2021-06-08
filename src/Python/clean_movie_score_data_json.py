@@ -35,12 +35,16 @@ class CleanMovieScoreDataJSON:
         )
         return df_actors
 
-df = CleanMovieScoreDataJSON()
+def main():
+    df = CleanMovieScoreDataJSON()
 
-df_no_actor = df.no_actors()
-df_no_actor = df.clean_no_actors(df_no_actor)
-df_no_actor.to_csv('../../data/processed/movies.csv', index=False)
+    df_no_actor = df.no_actors()
+    df_no_actor = df.clean_no_actors(df_no_actor)
+    df_no_actor.to_csv('../../data/processed/movies.csv', index=False)
 
-df_actor = df.get_df_actors()
-df_actor = df.explode_actors(df_actor)
-df_actor.to_csv('../../data/processed/actors.csv', index=False)
+    df_actor = df.get_df_actors()
+    df_actor = df.explode_actors(df_actor)
+    df_actor.to_csv('../../data/processed/actors.csv', index=False)
+
+if __name__ == '__main__':
+    main()

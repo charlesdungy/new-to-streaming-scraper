@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="By Charles Dungy" />
+
+
+<title>New to Netflix</title>
+
+<script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<script src="site_libs/proj4js-2.3.15/proj4.js"></script>
+<link href="site_libs/highcharts-8.1.2/css/motion.css" rel="stylesheet" />
+<script src="site_libs/highcharts-8.1.2/highcharts.js"></script>
+<script src="site_libs/highcharts-8.1.2/highcharts-3d.js"></script>
+<script src="site_libs/highcharts-8.1.2/highcharts-more.js"></script>
+<script src="site_libs/highcharts-8.1.2/modules/stock.js"></script>
+<script src="site_libs/highcharts-8.1.2/modules/map.js"></script>
+<script src="site_libs/highcharts-8.1.2/modules/annotations.js"></script>
+<script src="site_libs/highcharts-8.1.2/modules/data.js"></script>
+<script src="site_libs/highcharts-8.1.2/modules/drilldown.js"></script>
+<script src="site_libs/highcharts-8.1.2/modules/item-series.js"></script>
+<script src="site_libs/highcharts-8.1.2/modules/offline-exporting.js"></script>
+<script src="site_libs/highcharts-8.1.2/modules/overlapping-datalabels.js"></script>
+<script src="site_libs/highcharts-8.1.2/modules/exporting.js"></script>
+<script src="site_libs/highcharts-8.1.2/modules/export-data.js"></script>
+<script src="site_libs/highcharts-8.1.2/modules/funnel.js"></script>
+<script src="site_libs/highcharts-8.1.2/modules/heatmap.js"></script>
+<script src="site_libs/highcharts-8.1.2/modules/treemap.js"></script>
+<script src="site_libs/highcharts-8.1.2/modules/sankey.js"></script>
+<script src="site_libs/highcharts-8.1.2/modules/dependency-wheel.js"></script>
+<script src="site_libs/highcharts-8.1.2/modules/organization.js"></script>
+<script src="site_libs/highcharts-8.1.2/modules/solid-gauge.js"></script>
+<script src="site_libs/highcharts-8.1.2/modules/streamgraph.js"></script>
+<script src="site_libs/highcharts-8.1.2/modules/sunburst.js"></script>
+<script src="site_libs/highcharts-8.1.2/modules/vector.js"></script>
+<script src="site_libs/highcharts-8.1.2/modules/wordcloud.js"></script>
+<script src="site_libs/highcharts-8.1.2/modules/xrange.js"></script>
+<script src="site_libs/highcharts-8.1.2/modules/tilemap.js"></script>
+<script src="site_libs/highcharts-8.1.2/modules/venn.js"></script>
+<script src="site_libs/highcharts-8.1.2/modules/gantt.js"></script>
+<script src="site_libs/highcharts-8.1.2/modules/timeline.js"></script>
+<script src="site_libs/highcharts-8.1.2/modules/parallel-coordinates.js"></script>
+<script src="site_libs/highcharts-8.1.2/modules/bullet.js"></script>
+<script src="site_libs/highcharts-8.1.2/modules/coloraxis.js"></script>
+<script src="site_libs/highcharts-8.1.2/modules/dumbbell.js"></script>
+<script src="site_libs/highcharts-8.1.2/modules/lollipop.js"></script>
+<script src="site_libs/highcharts-8.1.2/modules/series-label.js"></script>
+<script src="site_libs/highcharts-8.1.2/plugins/motion.js"></script>
+<script src="site_libs/highcharts-8.1.2/custom/reset.js"></script>
+<script src="site_libs/highcharts-8.1.2/modules/boost.js"></script>
+<script src="site_libs/highchart-binding-0.8.2/highchart.js"></script>
+<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="site_libs/datatables-binding-0.18/datatables.js"></script>
+<link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="site_libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+<link href="site_libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Testing</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">New to Streaming Data Scraper - This Month</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">New to Netflix</h1>
+<h4 class="author">By Charles Dungy</h4>
+
+</div>
+
+
+<div id="htmlwidget-8865d268f6402c529cb1" style="width:100%;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-8865d268f6402c529cb1">{"x":{"hc_opts":{"chart":{"reflow":true},"title":{"text":"June 2021","margin":20,"align":"left","style":{"useHTML":true}},"yAxis":{"title":"Critic Score","type":"linear","opposite":false,"labels":{"format":"{value}%"},"min":0,"tickInterval":20,"max":100},"credits":{"enabled":false},"exporting":{"enabled":false},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":true},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}}},"series":[{"name":"G","data":[{"Title":"My Fair Lady","Date_Arriving":"04/01/2021","Release_year":1964,"Critic_score":95,"Audience_score":90,"Title_Category":"Musical","Rating":"G","Runtime":"2h 50m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/my_fair_lady","Poster_file_path":"../../data/images/april/My_Fair_Lady_1964_95_90.jpg","x":90,"y":95}],"type":"scatter","color":"#011f4b"},{"name":"NR","data":[{"Title":"Ajeeb Daastaans","Date_Arriving":"04/16/2021","Release_year":2021,"Critic_score":100,"Audience_score":50,"Title_Category":"Romance/Drama","Rating":"NR","Runtime":"2h 22m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/ajeeb_daastaans","Poster_file_path":"../../data/images/april/Ajeeb_Daastaans_2021_100_50.jpg","x":50,"y":100},{"Title":"Coded Bias","Date_Arriving":"04/05/2021","Release_year":2020,"Critic_score":100,"Audience_score":44,"Title_Category":"Documentary","Rating":"NR","Runtime":"1h 30m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/coded_bias","Poster_file_path":"../../data/images/april/Coded_Bias_2020_100_44.jpg","x":44,"y":100},{"Title":"Dark City Beneath the Beat","Date_Arriving":"04/15/2021","Release_year":2020,"Critic_score":100,"Audience_score":83,"Title_Category":"Documentary","Rating":"NR","Runtime":"","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/dark_city_beneath_the_beat","Poster_file_path":"../../data/images/april/Dark_City_Beneath_the_Beat_2020_100_83.jpg","x":83,"y":100},{"Title":"The Disciple","Date_Arriving":"04/30/2021","Release_year":2020,"Critic_score":97,"Audience_score":68,"Title_Category":"Music/Drama","Rating":"NR","Runtime":"2h 7m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/the_disciple_2020","Poster_file_path":"../../data/images/april/The_Disciple_2020_97_68.jpg","x":68,"y":97},{"Title":"Two Distant Strangers","Date_Arriving":"04/09/2021","Release_year":2020,"Critic_score":92,"Audience_score":67,"Title_Category":"Drama","Rating":"NR","Runtime":"29m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/two_distant_strangers","Poster_file_path":"../../data/images/april/Two_Distant_Strangers_2020_92_67.jpg","x":67,"y":92},{"Title":"Ram Prasad Ki Tehrvi","Date_Arriving":"04/23/2021","Release_year":2019,"Critic_score":86,"Audience_score":50,"Title_Category":"Drama/Comedy","Rating":"NR","Runtime":"1h 53m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/ramprasad_ki_tehrvi","Poster_file_path":null,"x":50,"y":86},{"Title":"Coven of Sisters","Date_Arriving":"04/01/2021","Release_year":2020,"Critic_score":83,"Audience_score":84,"Title_Category":"Drama","Rating":"NR","Runtime":"1h 30m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/coven_of_sisters","Poster_file_path":"../../data/images/april/Coven_of_Sisters_2020_83_84.jpg","x":84,"y":83},{"Title":"Arlo the Alligator Boy","Date_Arriving":"04/16/2021","Release_year":2021,"Critic_score":82,"Audience_score":85,"Title_Category":"Comedy/Animation","Rating":"NR","Runtime":"1h 30m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/arlo_the_alligator_boy","Poster_file_path":"../../data/images/april/Arlo_the_Alligator_Boy_2021_82_85.jpg","x":85,"y":82},{"Title":"Stowaway","Date_Arriving":"04/22/2021","Release_year":2021,"Critic_score":77,"Audience_score":49,"Title_Category":"Sci fi/Drama","Rating":"NR","Runtime":"1h 56m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/stowaway_2021","Poster_file_path":"../../data/images/april/Stowaway_2021_77_49.jpg","x":49,"y":77},{"Title":"Ride or Die","Date_Arriving":"04/15/2021","Release_year":2021,"Critic_score":71,"Audience_score":66,"Title_Category":"Mystery and thriller/Romance","Rating":"NR","Runtime":"2h 22m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/ride_or_die","Poster_file_path":"../../data/images/april/Ride_or_Die_2021_71_66.jpg","x":66,"y":71},{"Title":"Why Did You Kill Me?","Date_Arriving":"04/14/2021","Release_year":2021,"Critic_score":70,"Audience_score":32,"Title_Category":"Crime/Documentary","Rating":"NR","Runtime":"1h 23m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/why_did_you_kill_me","Poster_file_path":"../../data/images/april/Why_Did_You_Kill_Me?_2021_70_32.jpg","x":32,"y":70},{"Title":"Night in Paradise","Date_Arriving":"04/09/2021","Release_year":2020,"Critic_score":67,"Audience_score":70,"Title_Category":"Drama/Crime","Rating":"NR","Runtime":"2h 11m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/night_in_paradise","Poster_file_path":"../../data/images/april/Night_in_Paradise_2020_67_70.jpg","x":70,"y":67},{"Title":"What Lies Below","Date_Arriving":"04/04/2021","Release_year":2020,"Critic_score":53,"Audience_score":26,"Title_Category":"Mystery and thriller","Rating":"NR","Runtime":"1h 27m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/what_lies_below_2020","Poster_file_path":"../../data/images/april/What_Lies_Below_2020_53_26.jpg","x":26,"y":53},{"Title":"Things Heard & Seen","Date_Arriving":"04/29/2021","Release_year":2021,"Critic_score":39,"Audience_score":24,"Title_Category":"Horror/Mystery and thriller","Rating":"NR","Runtime":"2h 1m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/things_heard_and_seen","Poster_file_path":"../../data/images/april/Things_Heard_&_Seen_2021_39_24.jpg","x":24,"y":39},{"Title":"Searching For Sheela","Date_Arriving":"04/22/2021","Release_year":2021,"Critic_score":38,"Audience_score":12,"Title_Category":"Documentary","Rating":"NR","Runtime":"58m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/searching_for_sheela","Poster_file_path":null,"x":12,"y":38}],"type":"scatter","color":"#03396c"},{"name":"PG","data":[{"Title":"The Mitchells vs. The Machines","Date_Arriving":"04/30/2021","Release_year":2021,"Critic_score":98,"Audience_score":89,"Title_Category":"Kids and family/Comedy","Rating":"PG","Runtime":"1h 54m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/the_mitchells_vs_the_machines","Poster_file_path":"../../data/images/april/The_Mitchells_vs._The_Machines_2021_98_89.jpg","x":89,"y":98},{"Title":"Escape from Planet Earth","Date_Arriving":"04/03/2021","Release_year":2013,"Critic_score":35,"Audience_score":54,"Title_Category":"Comedy/Animation","Rating":"PG","Runtime":"1h 29m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/escape_from_planet_earth_2013","Poster_file_path":"../../data/images/april/Escape_from_Planet_Earth_2013_35_54.jpg","x":54,"y":35}],"type":"scatter","color":"#005b96"},{"name":"PG-13","data":[{"Title":"Legally Blonde","Date_Arriving":"04/01/2021","Release_year":2001,"Critic_score":70,"Audience_score":72,"Title_Category":"Comedy","Rating":"PG-13","Runtime":"1h 36m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/legally_blonde","Poster_file_path":"../../data/images/april/Legally_Blonde_2001_70_72.jpg","x":72,"y":70},{"Title":"Insidious","Date_Arriving":"04/01/2021","Release_year":2010,"Critic_score":66,"Audience_score":62,"Title_Category":"Horror/Mystery and thriller","Rating":"PG-13","Runtime":"1h 41m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/insidious","Poster_file_path":"../../data/images/april/Insidious_2010_66_62.jpg","x":62,"y":66},{"Title":"The Zookeeper's Wife","Date_Arriving":"04/16/2021","Release_year":2017,"Critic_score":64,"Audience_score":76,"Title_Category":"Biography/Drama","Rating":"PG-13","Runtime":"2h 5m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/the_zookeepers_wife_2017","Poster_file_path":"../../data/images/april/The_Zookeeper's_Wife_2017_64_76.jpg","x":76,"y":64},{"Title":"Yes Man","Date_Arriving":"04/01/2021","Release_year":2008,"Critic_score":46,"Audience_score":66,"Title_Category":"Comedy","Rating":"PG-13","Runtime":"1h 44m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/yes_man","Poster_file_path":"../../data/images/april/Yes_Man_2008_46_66.jpg","x":66,"y":46},{"Title":"2012","Date_Arriving":"04/01/2021","Release_year":2009,"Critic_score":39,"Audience_score":47,"Title_Category":"Action/Drama","Rating":"PG-13","Runtime":"2h 38m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/2012","Poster_file_path":"../../data/images/april/2012_2009_39_47.jpg","x":47,"y":39},{"Title":"The Possession","Date_Arriving":"04/01/2021","Release_year":2012,"Critic_score":39,"Audience_score":48,"Title_Category":"Horror/Mystery and thriller","Rating":"PG-13","Runtime":"1h 31m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/the_possession","Poster_file_path":"../../data/images/april/The_Possession_2012_39_48.jpg","x":48,"y":39},{"Title":"The Time Traveler's Wife","Date_Arriving":"04/01/2021","Release_year":2009,"Critic_score":38,"Audience_score":59,"Title_Category":"Sci fi/Drama","Rating":"PG-13","Runtime":"1h 47m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/time_travelers_wife","Poster_file_path":"../../data/images/april/The_Time_Traveler's_Wife_2009_38_59.jpg","x":59,"y":38},{"Title":"Tyler Perry's Madea's Big Happy Family","Date_Arriving":"04/01/2021","Release_year":2011,"Critic_score":38,"Audience_score":74,"Title_Category":"Comedy/Drama","Rating":"PG-13","Runtime":"1h 46m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/madeas_big_happy_family","Poster_file_path":null,"x":74,"y":38},{"Title":"Thunder Force","Date_Arriving":"04/09/2021","Release_year":2021,"Critic_score":22,"Audience_score":22,"Title_Category":"Adventure/Comedy","Rating":"PG-13","Runtime":"1h 47m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/thunder_force","Poster_file_path":"../../data/images/april/Thunder_Force_2021_22_22.jpg","x":22,"y":22},{"Title":"Kingsglaive: Final Fantasy XV","Date_Arriving":"04/01/2021","Release_year":2016,"Critic_score":12,"Audience_score":68,"Title_Category":"Animation/Action","Rating":"PG-13","Runtime":"1h 50m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/kingsglaive_final_fantasy_xv_2016","Poster_file_path":"../../data/images/april/Kingsglaive:_Final_Fantasy_XV_2016_12_68.jpg","x":68,"y":12}],"type":"scatter","color":"#6497b1"},{"name":"R","data":[{"Title":"The Pianist","Date_Arriving":"04/01/2021","Release_year":2002,"Critic_score":95,"Audience_score":96,"Title_Category":"War/Drama","Rating":"R","Runtime":"2h 28m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/pianist","Poster_file_path":"../../data/images/april/The_Pianist_2002_95_96.jpg","x":96,"y":95},{"Title":"Rush","Date_Arriving":"04/16/2021","Release_year":2013,"Critic_score":89,"Audience_score":88,"Title_Category":"Action/Drama","Rating":"R","Runtime":"2h 3m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/rush_2013","Poster_file_path":"../../data/images/april/Rush_2013_89_88.jpg","x":88,"y":89},{"Title":"The Master","Date_Arriving":"04/15/2021","Release_year":2012,"Critic_score":84,"Audience_score":62,"Title_Category":"Drama","Rating":"R","Runtime":"2h 16m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/the_master_2011","Poster_file_path":"../../data/images/april/The_Master_2012_84_62.jpg","x":62,"y":84},{"Title":"Concrete Cowboy","Date_Arriving":"04/02/2021","Release_year":2020,"Critic_score":81,"Audience_score":71,"Title_Category":"Drama","Rating":"R","Runtime":"1h 51m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/concrete_cowboy","Poster_file_path":"../../data/images/april/Concrete_Cowboy_2020_81_71.jpg","x":71,"y":81},{"Title":"Synchronic","Date_Arriving":"04/16/2021","Release_year":2019,"Critic_score":80,"Audience_score":76,"Title_Category":"Sci fi/Mystery and thriller","Rating":"R","Runtime":"1h 40m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/synchronic","Poster_file_path":"../../data/images/april/Synchronic_2019_80_76.jpg","x":76,"y":80},{"Title":"Miss Sloane","Date_Arriving":"04/19/2021","Release_year":2016,"Critic_score":76,"Audience_score":72,"Title_Category":"Drama/Mystery and thriller","Rating":"R","Runtime":"2h 12m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/miss_sloane","Poster_file_path":"../../data/images/april/Miss_Sloane_2016_76_72.jpg","x":72,"y":76},{"Title":"Crimson Peak","Date_Arriving":"04/16/2021","Release_year":2015,"Critic_score":72,"Audience_score":55,"Title_Category":"Romance/Horror","Rating":"R","Runtime":"1h 59m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/crimson_peak","Poster_file_path":"../../data/images/april/Crimson_Peak_2015_72_55.jpg","x":55,"y":72},{"Title":"Friends With Benefits","Date_Arriving":"04/01/2021","Release_year":2011,"Critic_score":68,"Audience_score":65,"Title_Category":"Romance","Rating":"R","Runtime":"1h 49m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/friends_with_benefits","Poster_file_path":"../../data/images/april/Friends_With_Benefits_2011_68_65.jpg","x":65,"y":68},{"Title":"August: Osage County","Date_Arriving":"04/27/2021","Release_year":2013,"Critic_score":67,"Audience_score":65,"Title_Category":"Comedy/Drama","Rating":"R","Runtime":"1h 59m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/august_osage_county","Poster_file_path":"../../data/images/april/August:_Osage_County_2013_67_65.jpg","x":65,"y":67},{"Title":"The Stand In","Date_Arriving":"04/10/2021","Release_year":2020,"Critic_score":30,"Audience_score":20,"Title_Category":"Romance","Rating":"R","Runtime":"1h 41m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/the_stand_in_2020","Poster_file_path":"../../data/images/april/The_Stand_In_2020_30_20.jpg","x":20,"y":30},{"Title":"Leprechaun","Date_Arriving":"04/01/2021","Release_year":1993,"Critic_score":27,"Audience_score":32,"Title_Category":"Comedy/Horror","Rating":"R","Runtime":"1h 32m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/leprechaun","Poster_file_path":"../../data/images/april/Leprechaun_1993_27_32.jpg","x":32,"y":27},{"Title":"Cop Out","Date_Arriving":"04/01/2021","Release_year":2010,"Critic_score":19,"Audience_score":39,"Title_Category":"Comedy/Drama","Rating":"R","Runtime":"1h 43m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/cop_out","Poster_file_path":"../../data/images/april/Cop_Out_2010_19_39.jpg","x":39,"y":19},{"Title":"Air Strike","Date_Arriving":"04/02/2021","Release_year":2018,"Critic_score":0,"Audience_score":12,"Title_Category":"War/Drama","Rating":"R","Runtime":"1h 37m","Title_type":"Movie","URL":"https://www.rottentomatoes.com/m/air_strike_2018","Poster_file_path":"../../data/images/april/Air_Strike_2018_0_12.jpg","x":12,"y":0}],"type":"scatter","color":"#b3cde0"}],"xAxis":{"type":"linear","title":"Audience Score","opposite":false,"labels":{"format":"{value}%"},"tickLength":0,"tickInterval":10},"tooltip":{"pointFormat":"<b>{point.Title}<\/b>, \n                   {point.Release_year},\n                   {point.Rating}\n                   <br> ----- <br> \n                   Critic Score: {point.y: .0f}% <br>\n                   Audience Score: {point.x: .0f}% <br>\n                   Runtime: {point.Runtime} <br>\n                   Genre: {point.Title_Category}"},"subtitle":{"text":"New Titles Streaming to Netflix: Critic Score vs. Audience Score","align":"left","style":{"color":"#2b908f","fontWeight":"bold"}},"legend":{"align":"right","verticalAlign":"bottom","layout":"horizontal"},"caption":{"align":"right","margin":10,"text":"Movie titles without either an audience score or critic score have \n    been omitted.<br>Source: Netflix; Rotten Tomatoes; What's on Netflix"}},"theme":{"colors":["#47475c","#61BC7B","#508CC8","#F49952","#9C9EDB","#6699a1"],"chart":{"style":{"fontFamily":"Roboto","color":"#666666"}},"title":{"align":"left","style":{"fontFamily":"Alegreya Sans SC","fontSize":"24px"}},"subtitle":{"align":"left","style":{"fontFamily":"Alegreya Sans","fontSize":"16px"}},"caption":{"style":{"fontFamily":"Alegreya Sans","fontSize":"14px"}},"credits":{"style":{"fontFamily":"Roboto","fontSize":"10px"}},"legend":{"align":"right","verticalAlign":"bottom"},"xAxis":{"gridLineWidth":1,"gridLineColor":"#F3F3F3","lineColor":"#F3F3F3","minorGridLineColor":"#F3F3F3","tickColor":"#F3F3F3","tickWidth":1},"yAxis":{"gridLineColor":"#F3F3F3","lineColor":"#F3F3F3","minorGridLineColor":"#F3F3F3","tickColor":"#F3F3F3","tickWidth":1},"plotOptions":{"line":{"marker":{"enabled":false}},"spline":{"marker":{"enabled":false}},"area":{"marker":{"enabled":false}},"areaspline":{"marker":{"enabled":false}},"arearange":{"marker":{"enabled":false}},"bubble":{"maxSize":"10%"}}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":["Roboto","Alegreya+Sans+SC","Alegreya+Sans"],"debug":false},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-0c6f40b7ad1bfdd97838" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-0c6f40b7ad1bfdd97838">{"x":{"filter":"none","caption":"<caption style=\"caption-side: top; text-align: left; padding-top: 10px\">New Titles Streaming to Netflix for June 2021<\/caption>","data":[["<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/Ajeeb_Daastaans_2021_100_50.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">","<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/Coded_Bias_2020_100_44.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">","<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/Dark_City_Beneath_the_Beat_2020_100_83.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">","<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/The_Mitchells_vs._The_Machines_2021_98_89.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">","<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/The_Disciple_2020_97_68.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">","<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/My_Fair_Lady_1964_95_90.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">","<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/The_Pianist_2002_95_96.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">","<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/Two_Distant_Strangers_2020_92_67.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">","<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/Rush_2013_89_88.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">",null,"<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/The_Master_2012_84_62.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">","<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/Coven_of_Sisters_2020_83_84.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">","<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/Arlo_the_Alligator_Boy_2021_82_85.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">","<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/Concrete_Cowboy_2020_81_71.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">","<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/Synchronic_2019_80_76.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">","<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/Stowaway_2021_77_49.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">","<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/Miss_Sloane_2016_76_72.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">","<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/Crimson_Peak_2015_72_55.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">","<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/Ride_or_Die_2021_71_66.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">","<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/Legally_Blonde_2001_70_72.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">","<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/Why_Did_You_Kill_Me?_2021_70_32.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">","<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/Friends_With_Benefits_2011_68_65.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">","<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/August:_Osage_County_2013_67_65.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">","<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/Night_in_Paradise_2020_67_70.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">","<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/Insidious_2010_66_62.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">","<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/The_Zookeeper's_Wife_2017_64_76.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">","<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/What_Lies_Below_2020_53_26.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">","<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/Yes_Man_2008_46_66.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">","<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/2012_2009_39_47.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">","<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/The_Possession_2012_39_48.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">","<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/Things_Heard_&_Seen_2021_39_24.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">",null,"<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/The_Time_Traveler's_Wife_2009_38_59.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">",null,"<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/Escape_from_Planet_Earth_2013_35_54.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">","<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/The_Stand_In_2020_30_20.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">","<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/Leprechaun_1993_27_32.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">","<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/Thunder_Force_2021_22_22.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">","<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/Cop_Out_2010_19_39.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">","<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/Kingsglaive:_Final_Fantasy_XV_2016_12_68.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">","<img src=\"https://raw.githubusercontent.com/charlesdungy/new-to-streaming-scraper/main/data/images/april/Air_Strike_2018_0_12.jpg\" alt=\"\" class=\"rounded-corners\" width=\"205\" height=\"150\">"],["Ajeeb Daastaans","Coded Bias","Dark City Beneath the Beat","The Mitchells vs. The Machines","The Disciple","My Fair Lady","The Pianist","Two Distant Strangers","Rush","Ram Prasad Ki Tehrvi","The Master","Coven of Sisters","Arlo the Alligator Boy","Concrete Cowboy","Synchronic","Stowaway","Miss Sloane","Crimson Peak","Ride or Die","Legally Blonde","Why Did You Kill Me?","Friends With Benefits","August: Osage County","Night in Paradise","Insidious","The Zookeeper's Wife","What Lies Below","Yes Man","2012","The Possession","Things Heard & Seen","Searching For Sheela","The Time Traveler's Wife","Tyler Perry's Madea's Big Happy Family","Escape from Planet Earth","The Stand In","Leprechaun","Thunder Force","Cop Out","Kingsglaive: Final Fantasy XV","Air Strike"],[2021,2020,2020,2021,2020,1964,2002,2020,2013,2019,2012,2020,2021,2020,2019,2021,2016,2015,2021,2001,2021,2011,2013,2020,2010,2017,2020,2008,2009,2012,2021,2021,2009,2011,2013,2020,1993,2021,2010,2016,2018],["100%","100%","100%","98%","97%","95%","95%","92%","89%","86%","84%","83%","82%","81%","80%","77%","76%","72%","71%","70%","70%","68%","67%","67%","66%","64%","53%","46%","39%","39%","39%","38%","38%","38%","35%","30%","27%","22%","19%","12%","0%"],["50%","44%","83%","89%","68%","90%","96%","67%","88%","50%","62%","84%","85%","71%","76%","49%","72%","55%","66%","72%","32%","65%","65%","70%","62%","76%","26%","66%","47%","48%","24%","12%","59%","74%","54%","20%","32%","22%","39%","68%","12%"],["NR","NR","NR","PG","NR","G","R","NR","R","NR","R","NR","NR","R","R","NR","R","R","NR","PG-13","NR","R","R","NR","PG-13","PG-13","NR","PG-13","PG-13","PG-13","NR","NR","PG-13","PG-13","PG","R","R","PG-13","R","PG-13","R"],["2h 22m","1h 30m","","1h 54m","2h 7m","2h 50m","2h 28m","29m","2h 3m","1h 53m","2h 16m","1h 30m","1h 30m","1h 51m","1h 40m","1h 56m","2h 12m","1h 59m","2h 22m","1h 36m","1h 23m","1h 49m","1h 59m","2h 11m","1h 41m","2h 5m","1h 27m","1h 44m","2h 38m","1h 31m","2h 1m","58m","1h 47m","1h 46m","1h 29m","1h 41m","1h 32m","1h 47m","1h 43m","1h 50m","1h 37m"],["Romance/Drama","Documentary","Documentary","Kids and family/Comedy","Music/Drama","Musical","War/Drama","Drama","Action/Drama","Drama/Comedy","Drama","Drama","Comedy/Animation","Drama","Sci fi/Mystery and thriller","Sci fi/Drama","Drama/Mystery and thriller","Romance/Horror","Mystery and thriller/Romance","Comedy","Crime/Documentary","Romance","Comedy/Drama","Drama/Crime","Horror/Mystery and thriller","Biography/Drama","Mystery and thriller","Comedy","Action/Drama","Horror/Mystery and thriller","Horror/Mystery and thriller","Documentary","Sci fi/Drama","Comedy/Drama","Comedy/Animation","Romance","Comedy/Horror","Adventure/Comedy","Comedy/Drama","Animation/Action","War/Drama"],["04/16/2021","04/05/2021","04/15/2021","04/30/2021","04/30/2021","04/01/2021","04/01/2021","04/09/2021","04/16/2021","04/23/2021","04/15/2021","04/01/2021","04/16/2021","04/02/2021","04/16/2021","04/22/2021","04/19/2021","04/16/2021","04/15/2021","04/01/2021","04/14/2021","04/01/2021","04/27/2021","04/09/2021","04/01/2021","04/16/2021","04/04/2021","04/01/2021","04/01/2021","04/01/2021","04/29/2021","04/22/2021","04/01/2021","04/01/2021","04/03/2021","04/10/2021","04/01/2021","04/09/2021","04/01/2021","04/01/2021","04/02/2021"]],"container":"<table class=\"cell-border stripe\">\n  <thead>\n    <tr>\n      <th>Poster<\/th>\n      <th>Title<\/th>\n      <th>Year<\/th>\n      <th>Critic Score<\/th>\n      <th>Audience Score<\/th>\n      <th>Rating<\/th>\n      <th>Runtime<\/th>\n      <th>Genre<\/th>\n      <th>Date Arriving<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":150,"columnDefs":[{"className":"dt-center","targets":[0,1,2,3,4,5,6,7,8]}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[10,25,50,100,150],"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[0]; $(this.api().cell(row, 0).node()).css({'font-family':'Arial','align':'center'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'font-family':'Arial','align':'center'});\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'font-family':'Arial','align':'center'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'font-family':'Arial','align':'center'});\nvar value=data[4]; $(this.api().cell(row, 4).node()).css({'font-family':'Arial','align':'center'});\nvar value=data[5]; $(this.api().cell(row, 5).node()).css({'font-family':'Arial','align':'center'});\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'font-family':'Arial','align':'center'});\nvar value=data[7]; $(this.api().cell(row, 7).node()).css({'font-family':'Arial','align':'center'});\nvar value=data[8]; $(this.api().cell(row, 8).node()).css({'font-family':'Arial','align':'center'});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -9,7 +9,7 @@ class RottenTomatoesSpider(scrapy.Spider):
     start_urls = []
     
     """ """
-    with open('../../../../data/processed/rotten_tomatoes_search_url.csv') as   url_file:
+    with open('../../../../../data/processed/rotten_tomatoes_search_url.csv') as   url_file:
         url_reader = csv.reader(url_file, delimiter=',')
         next(url_reader, None)
         for row in url_reader:
@@ -28,15 +28,25 @@ class RottenTomatoesSpider(scrapy.Spider):
         """ """
         movie = response.xpath(("//div[@id='topSection']//score-board/h1/"
                                 "text()")).extract()[0]
-        score = response.xpath(("//div[@id='topSection']//score-board"
-                                "/@tomatometerscore")).extract()[0]
+        critic_score = response.xpath(("//div[@id='topSection']//score-board"
+                                       "/@tomatometerscore")).extract()[0]
+        audience_score = response.xpath(("//div[@id='topSection']//score-board"
+                                         "/@audiencescore")).extract()[0]
         details = response.xpath(("//div[@id='topSection']"
                                   "//score-board/p/text()")).extract()[0]
+        rating = response.xpath(("//div[@id='topSection']//score-board"
+                                 "/@rating")).extract()[0]
+        poster_url = response.xpath(("//div[@id='topSection']//div//div"
+                                     "[@class='center']//img/"
+                                     "@data-src")).extract()[0]
         url = response.request.url
 
         yield {
             'Title': movie,
-            'Score': score,
+            'Critic_score': critic_score,
+            'Audience_score': audience_score,
             'Details': details,
+            'Rating': rating,
             'URL': url,
+            'Poster_URL': poster_url
         }

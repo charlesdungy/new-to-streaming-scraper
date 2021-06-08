@@ -20,5 +20,9 @@ class BuildSearchURL:
         df.to_csv('../../data/processed/rotten_tomatoes_search_url.csv',    
                   index=False)
 
-x = BuildSearchURL()
-x.create_search_url()
+def main():
+    x = BuildSearchURL()
+    x.create_search_url()
+
+if __name__ == '__main__':
+    main()

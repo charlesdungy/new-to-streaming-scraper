@@ -32,9 +32,18 @@ CREATE TABLE NETFLIX (
 CREATE TABLE MOVIE_SCORE_DATA (
 	Title VARCHAR(255) NOT NULL,
     Title_year CHAR(4) NOT NULL,
-	Movie_score VARCHAR(3),
+	Critic_score VARCHAR(3) NOT NULL,
+    Audience_score VARCHAR(3) NOT NULL,
     Title_category VARCHAR(255),
+    Rating VARCHAR(10),
     Runtime VARCHAR(10),
     URL VARCHAR(255),
-    PRIMARY KEY (Title, Title_year)
+    Poster_URL VARCHAR(255),
+    PRIMARY KEY (Title, Title_year, Critic_score, Audience_score)
+);
+
+CREATE TABLE MOVIE_POSTER_DATA (
+    Poster_URL VARCHAR(255) NOT NULL,
+    Poster_file_path VARCHAR(255) NOT NULL,
+    PRIMARY KEY (Poster_URL, Poster_file_path)
 );
