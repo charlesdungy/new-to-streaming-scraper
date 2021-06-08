@@ -5,6 +5,9 @@ An in-progress web scraping project built with Python, R, and SQL.
 The scraped data are movie and TV show information. The goal of the project is to show new to streaming titles that arrive on Netflix monthly with additional details, such as critic and audience ratings.
 
 Current stage: Preparing how to present data with R Markdown.
+> Testing at: https://charlesdungy.github.io/new-to-streaming-scraper/
+
+Future stage: Complete documentation, comments.
 
 ## Description
 
@@ -16,7 +19,7 @@ Here is a high-level look at the pipeline:<br>
 
 ![Pipeline](https://github.com/charlesdungy/new-to-streaming-scraper/blob/main/data/images/new-to-streaming-pipeline.png?raw=true)
 
-##### Data Source 1 is WON data. Data Source 2 is RT data.
+###### *Data Source 1 is WON data. Data Source 2 is RT data.*
 
 ## Main Packages/Tools
 
@@ -28,6 +31,8 @@ Here is a high-level look at the pipeline:<br>
 
 ### R
 
+* [Highcharter](https://jkunst.com/highcharter/)
+* [htmlwidgets](http://www.htmlwidgets.org/index.html)
 * [R Markdown](https://rmarkdown.rstudio.com)
 * [Tidyverse](https://www.tidyverse.org)
 
