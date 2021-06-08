@@ -6,6 +6,7 @@ venv/**
 src/R/.Rproj.user/**
 src/Python/Scrapy/stream/__pycache__/**
 docs/docs.Rproj
+docs/_site/**
 
 *.vscode
 *.pper
