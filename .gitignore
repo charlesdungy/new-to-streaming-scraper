@@ -1,9 +1,11 @@
 src/Python/Scrapy/under_construction/**
 __pycache__/**
 config/**
+src/Python/config/**
 venv/**
 src/R/.Rproj.user/**
 src/Python/Scrapy/stream/__pycache__/**
+docs/docs.Rproj
 
 *.vscode
 *.pper
