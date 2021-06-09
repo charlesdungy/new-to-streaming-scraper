@@ -73,13 +73,13 @@ hchart <- hchart %>%
     min = 0,
     tickInterval = 20,
     max = 100,
-    title = "Critic Score") %>% 
+    title = list(text = "Critic Score")) %>% 
   hc_xAxis(
     opposite = FALSE, 
     labels = list(format = "{value}%"),
     tickLength = 0,
     tickInterval = 10,
-    title = "Audience Score") %>% 
+    title = list(text = "Audience Score")) %>% 
   hc_tooltip(
     pointFormat = '<b>{point.Title}</b>, 
                    {point.Release_year},
