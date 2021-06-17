@@ -1,6 +1,6 @@
-name: "Testing"
+name: ""
 navbar:
-  title: "Testing"
+  title: ""
   left:
     - text: "New to Streaming Data Scraper - This Month"
       href: index.html

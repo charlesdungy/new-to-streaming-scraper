@@ -1,5 +1,5 @@
 ---
-title: "New to Netflix (Test Run with April Data)**"
+title: "New to Netflix"
 author: "By Charles Dungy"
 output: html_document
 ---
@@ -40,7 +40,9 @@ sql_stmt <- "SELECT N.Title,
                     ON M.Title=N.Title 
                     AND M.Title_year=N.Release_year
                     LEFT JOIN MOVIE_POSTER_DATA P
-                    ON P.Poster_URL=M.Poster_URL"
+                    ON P.Poster_URL=M.Poster_URL
+             WHERE  MONTH(N.Date_Arriving)=6
+                    AND N.Title_type='Movie'"
 ```
 
 ```{r, echo=FALSE, warning=FALSE, include=FALSE}
@@ -53,7 +55,6 @@ monthly_df <- as.data.frame(
 ```{r, echo=FALSE, warning=FALSE, include=FALSE}
 # Movies only, omit critic/audience scores that are NR, parse as number, sort -- 
 monthly_df_filtered <- monthly_df %>%
-  filter(Title_type == "Movie") %>%
   filter(Critic_score != "NR") %>%
   filter(Audience_score != "NR") %>%
   mutate(Critic_score = parse_number(Critic_score, na = c("", "NR"))) %>%
@@ -82,8 +83,7 @@ hchart <- hchart(
   color = c('#011f4b', 
             '#03396c', 
             '#005b96', 
-            '#6497b1', 
-            '#b3cde0')
+            '#6497b1')
 ) 
 ```
 
