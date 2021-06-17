@@ -1,0 +1,7 @@
+ERROR:root:1366 (HY000): Incorrect integer value: '' for column 'Release_year' at row 1
+ERROR:root:1062 (23000): Duplicate entry 'Fools Rush In-1997-32-64' for key 'movie_score_data.PRIMARY'
+ERROR:root:1062 (23000): Duplicate entry 'The Broken Circle Breakdown-2012-83-85' for key 'movie_score_data.PRIMARY'
+ERROR:root:1062 (23000): Duplicate entry 'The Platform-2019-80-72' for key 'movie_score_data.PRIMARY'
+ERROR:root:1062 (23000): Duplicate entry 'Platform-2000-80-79' for key 'movie_score_data.PRIMARY'
+ERROR:root:1062 (23000): Duplicate entry 'Friends With Benefits-2011-68-65' for key 'movie_score_data.PRIMARY'
+ERROR:root:1062 (23000): Duplicate entry 'Streams in the Desert: Discovering God's Call-2015-NR-NR' for key 'movie_score_data.PRIMARY'

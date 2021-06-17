@@ -1,11 +1,13 @@
 library(lubridate)
 library(tidyverse)
 
-current_month <- as.character(month(today() - 30, label = TRUE, abbr = FALSE))
+current_month <- as.character(month(today(), label = TRUE, abbr = FALSE))
+current_month_lower <- str_to_lower(current_month)
 current_year <- as.character(year(now()))
 
 # Import data ------------------------------------------------------------------
-df <- read_csv("../../data/raw/whatsonnetflix.csv", col_names = FALSE)
+file_name <- str_c("../../data/raw/whatsonnetflix_", current_month_lower, ".csv")
+df <- read_csv(file_name, col_names = FALSE)
 netflix_df <- df
 
 # Drop X1, rename X2 to Title, create Temp_Date in order to extract date -------
@@ -62,7 +64,7 @@ netflix_df <- netflix_df %>%
 
 #
 file_ext <- ".csv"
-file_name <- str_c("netflix", sep = "_", str_to_lower(current_month))
+file_name <- str_c("netflix", sep = "_", current_month_lower)
 file_name <- str_c(file_name, sep = "", file_ext)
 file_path <- str_c("../../data/processed/", sep = "", file_name)
 

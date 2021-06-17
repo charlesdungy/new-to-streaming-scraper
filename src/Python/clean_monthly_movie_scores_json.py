@@ -1,10 +1,12 @@
-import pandas as pd 
+from current_month import CurrentMonth
 import numpy as np 
+import pandas as pd 
 
 class CleanMonthlyMovieScoresJSON:
     def __init__(self):
         """ """
-        self.df = pd.read_json('../../data/raw/april_movie_scores_v2.json')
+        self.current_month = CurrentMonth.CURRENT_MONTH.lower()
+        self.df = pd.read_json(f'''../../data/raw/{self.current_month}_movie_scores.json''')
 
     def replace_blank_values(self):
         """ """
@@ -49,7 +51,7 @@ class CleanMonthlyMovieScoresJSON:
 
     def write_to_csv(self):
         """ """
-        self.df.to_csv('../../data/processed/movie_score_data.csv', index=False)
+        self.df.to_csv(f'''../../data/processed/movie_score_data_{self.current_month}.csv''', index=False)
 
 def main():
     x = CleanMonthlyMovieScoresJSON()

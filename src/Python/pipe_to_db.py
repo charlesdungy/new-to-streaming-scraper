@@ -1,4 +1,5 @@
-from config.config import config
+from config.config_ import config
+from current_month import CurrentMonth
 from datetime import datetime
 from mysql.connector import connect, Error
 
@@ -8,6 +9,8 @@ import logging
 class PipeToDB:
     def __init__(self):
         """ """
+        self.current_month = CurrentMonth.CURRENT_MONTH.lower()
+
         logging.basicConfig(
             filename='logs/db.log',
             encoding='utf-8', 
@@ -19,6 +22,8 @@ class PipeToDB:
             self.cnx = connect(**config)
         except Error as e:
             logging.error(e)
+            print('no')
+            quit()
 
     def insert_movies(self):
         """ """
@@ -43,10 +48,7 @@ class PipeToDB:
                     'Title_type, Release_year, Season, Weekly) '
                     'VALUES (%s, %s, %s, %s, %s, %s)')
 
-        current_time = datetime.now()
-        current_month_text = current_time.strftime('%b').lower()
-        
-        file_name = f'../../data/processed/netflix_{current_month_text}.csv'
+        file_name = f'../../data/processed/netflix_{self.current_month}.csv'
         self.place_into_db(file_name, sql_stmt)
 
     def insert_movie_score_data(self):
@@ -55,7 +57,7 @@ class PipeToDB:
                     'Title_year, Critic_score, Audience_score, ' 'Title_category, Rating, Runtime, URL, Poster_URL) '
                     'VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)')
 
-        file_name = '../../data/processed/movie_score_data.csv'
+        file_name = f'''../../data/processed/movie_score_data_{self.current_month}.csv'''
         self.place_into_db(file_name, sql_stmt)
 
     def insert_movie_poster_data(self):
@@ -63,7 +65,7 @@ class PipeToDB:
         sql_stmt = ('INSERT INTO MOVIE_POSTER_DATA (Poster_URL, '
                     'Poster_file_path) VALUES (%s, %s)')
 
-        file_name = '../../data/processed/movie_poster_data.csv'
+        file_name = f'''../../data/processed/movie_poster_data_{self.current_month}.csv'''
         self.place_into_db(file_name, sql_stmt)
 
     def place_into_db(self, file_name, sql_stmt):
@@ -86,8 +88,6 @@ class PipeToDB:
 
 def main():
     x = PipeToDB()
-    x.insert_movies()
-    x.insert_actors()
     x.insert_new_to_netflix()
     x.insert_movie_score_data()
     x.insert_movie_poster_data()

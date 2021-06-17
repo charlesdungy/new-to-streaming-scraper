@@ -1,3 +1,4 @@
+from datetime import datetime
 import csv
 import json
 import scrapy
@@ -7,9 +8,10 @@ class RottenTomatoesSpider(scrapy.Spider):
     name = 'rottentomatoes'
     allowed_domains = ['rottentomatoes.com']
     start_urls = []
+    current_month = datetime.now().strftime('%B').lower()
     
     """ """
-    with open('../../../../../data/processed/rotten_tomatoes_search_url.csv') as   url_file:
+    with open(f'''../../../../../data/processed/rotten_tomatoes_search_url_{current_month}.csv''') as url_file:
         url_reader = csv.reader(url_file, delimiter=',')
         next(url_reader, None)
         for row in url_reader:

@@ -1,11 +1,12 @@
-import scrapy
+from datetime import datetime
 import pandas as pd
+import scrapy
 
 class WhatsOnNetflixSpider(scrapy.Spider):
     name = 'whatsonnetflix'
     allowed_domains = ['https://www.whats-on-netflix.com']
     start_urls = [("https://www.whats-on-netflix.com/coming-soon"
-                   "/whats-coming-to-netflix-in-april-2021-04-11/")]
+                   "/whats-coming-to-netflix-in-june-2021-06-16/")]
 
     def parse(self, response):
         """ """
@@ -16,5 +17,7 @@ class WhatsOnNetflixSpider(scrapy.Spider):
 
     def write_to_csv(self, item):
         """ """
+        current_month = datetime.now().strftime('%B').lower()
         df = pd.DataFrame(item)
-        df.to_csv('../../data/raw/whatsonnetflix.csv')
+        df.to_csv((f'../../../../../data/raw/whatsonnetflix_{current_month}'
+                    '.csv'), mode='w')
