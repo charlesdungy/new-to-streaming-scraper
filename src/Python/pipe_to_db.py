@@ -22,7 +22,6 @@ class PipeToDB:
             self.cnx = connect(**config)
         except Error as e:
             logging.error(e)
-            print('no')
             quit()
 
     def insert_movies(self):
