@@ -9,7 +9,7 @@ The scraped data are movie and TV show information. The goal of the project is t
 
 ~~Future stage: Complete documentation, comments.~~
 
-Note: this project will see no future updates.
+Note: Though GitHub may be hosting this project's demo, this project will see no future updates.
 
 ## Description
 
