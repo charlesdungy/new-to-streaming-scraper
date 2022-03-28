@@ -1,13 +1,15 @@
 # New to Streaming Scraper
 
-An in-progress web scraping project built with Python, R, and SQL. 
+This is a web scraping project built with Python, R, and SQL. 
 
 The scraped data are movie and TV show information. The goal of the project is to show new to streaming titles that arrive on Netflix monthly with additional details, such as critic and audience ratings.
 
-Current stage: Preparing how to present data with R Markdown.
-> Testing at: https://charlesdungy.github.io/new-to-streaming-scraper/
+~~Current stage: Preparing how to present data with R Markdown.~~
+> ~~Testing at: https://no-longer-hosted.com~~
 
-Future stage: Complete documentation, comments.
+~~Future stage: Complete documentation, comments.~~
+
+Note: this project will see no future updates.
 
 ## Description
 
